@@ -150,9 +150,9 @@
                                 </rowConstraints>
                                 <children>
                                     <Button fx:id="btnNetWages" mnemonicParsing="false" onAction="#handleNetWages" text="Net Wages" />
-                                    <Button fx:id="btnPaySlip" mnemonicParsing="false" text="Pay Slip" GridPane.columnIndex="1" />
-                                    <Button fx:id="btnReset" mnemonicParsing="false" text="Reset" GridPane.rowIndex="1" />
-                                    <Button fx:id="btnExit" mnemonicParsing="false" text="Exit" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Button fx:id="btnPaySlip" mnemonicParsing="false" onAction="#handlePaySlip" text="Pay Slip" GridPane.columnIndex="1" />
+                                    <Button fx:id="btnReset" mnemonicParsing="false" onAction="#handleReset" text="Reset" GridPane.rowIndex="1" />
+                                    <Button fx:id="btnExit" mnemonicParsing="false" onAction="#handleExit" text="Exit" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                 </children>
                                 <padding>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

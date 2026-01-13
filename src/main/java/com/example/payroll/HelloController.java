@@ -42,7 +42,6 @@ public class HelloController {
                 "1", "2", "3", "4", "5", "6",
                 "7", "8", "9", "10", "11", "12"
         );
-
         cbTaxPeriod.setPromptText("Select Period");
 
         cbTaxCode.getItems().addAll(
@@ -54,6 +53,16 @@ public class HelloController {
                 "A", "B", "C", "H", "J", "M", "Z"
         );
         cbNICode.setPromptText("Select NI Code");
+
+        // Make Calculation Fields Read-Only ---
+        tfGrossPay.setEditable(false);
+        tfNetPay.setEditable(false);
+        tfDeductions.setEditable(false);
+        tfTaxablePay.setEditable(false);
+        tfPensionablePay.setEditable(false);
+
+        // Make the Payslip area read-only
+        taPayslip.setEditable(false);
     }
 
     @FXML
@@ -82,6 +91,83 @@ public class HelloController {
         tfNetPay.setText(String.format("%.2f", netPay));
         tfTaxablePay.setText(String.format("%.2f", grossPay)); // optional placeholder
         tfPensionablePay.setText(String.format("%.2f", grossPay)); // optional placeholder
+    }
+
+    @FXML
+    private void handlePaySlip() {
+        // Clear previous text
+        taPayslip.clear();
+
+        // Header
+        taPayslip.appendText("========================================\n");
+        taPayslip.appendText("           PAY SLIP RECEIPT             \n");
+        taPayslip.appendText("========================================\n\n");
+
+        // Employee Details
+        taPayslip.appendText("Name:          " + tfEmpName.getText() + "\n");
+        taPayslip.appendText("Address:       " + tfEmpAddress.getText() + "\n");
+        taPayslip.appendText("Reference:     " + tfEmpRef.getText() + "\n");
+        taPayslip.appendText("NI Number:     " + tfNINumber.getText() + "\n");
+        taPayslip.appendText("Pay Date:      " + tfPayDate.getText() + "\n");
+
+        // Handle ComboBoxes safely (check if null)
+        String taxCode = cbTaxCode.getValue() != null ? cbTaxCode.getValue() : "";
+        String taxPeriod = cbTaxPeriod.getValue() != null ? cbTaxPeriod.getValue() : "";
+        taPayslip.appendText("Tax Code:      " + taxCode + "\n");
+        taPayslip.appendText("Tax Period:    " + taxPeriod + "\n");
+
+        taPayslip.appendText("----------------------------------------\n");
+
+        // Financials
+        taPayslip.appendText("Basic Salary:  £" + tfBasicSalary.getText() + "\n");
+        taPayslip.appendText("Overtime:      £" + tfOvertime.getText() + "\n");
+        taPayslip.appendText("Gross Pay:     £" + tfGrossPay.getText() + "\n");
+
+        taPayslip.appendText("\n--- DEDUCTIONS -------------------------\n");
+        taPayslip.appendText("Tax:           £" + tfTax.getText() + "\n");
+        taPayslip.appendText("Pension:       £" + tfPension.getText() + "\n");
+        taPayslip.appendText("Student Loan:  £" + tfStudentLoan.getText() + "\n");
+        taPayslip.appendText("NI Payment:    £" + tfNIPayment.getText() + "\n");
+        taPayslip.appendText("Total Ded.:    £" + tfDeductions.getText() + "\n");
+
+        taPayslip.appendText("\nNET PAY:       £" + tfNetPay.getText() + "\n");
+    }
+
+    @FXML
+    private void handleReset() {
+        // Clear TextFields
+        tfEmployerName.setText("");
+        tfEmpRef.setText("");
+        tfEmpName.setText("");
+        tfEmpAddress.setText("");
+        tfPostCode.setText("");
+        tfICW.setText("");
+        tfBasicSalary.setText("");
+        tfOvertime.setText("");
+        tfGrossPay.setText("");
+        tfPensionablePay.setText("");
+        tfNetPay.setText("");
+        tfPayDate.setText("");
+        tfNINumber.setText("");
+        tfTax.setText("");
+        tfPension.setText("");
+        tfStudentLoan.setText("");
+        tfNIPayment.setText("");
+        tfTaxablePay.setText("");
+        tfDeductions.setText("");
+
+        // Clear ComboBox selections
+        cbTaxPeriod.setValue(null);
+        cbTaxCode.setValue(null);
+        cbNICode.setValue(null);
+
+        // Clear Payslip Area
+        taPayslip.setText("");
+    }
+
+    @FXML
+    private void handleExit() {
+        System.exit(0);
     }
 
     private double parseDoubleSafe(String text) {
