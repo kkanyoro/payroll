@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="570.0" prefWidth="783.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.payroll.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <BorderPane prefHeight="600.0" prefWidth="950.0">
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </padding>
+        <top>
+
+            <Label fx:id="welcomeText" text="Payroll Management System" BorderPane.alignment="CENTER">
+                <font>
+                    <Font size="24.0" />
+                </font>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+            </Label>
+        </top>
+        <center>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+                <children>
+                    <GridPane hgap="10.0" vgap="8.0">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Label text="Employer’s Name :" />
+                            <TextField fx:id="tfEmployerName" GridPane.columnIndex="1" />
+                            <Label text="Employee Ref. No." GridPane.rowIndex="1" />
+                            <Label text="Employee Name" GridPane.rowIndex="2" />
+                            <Label text="Employee Address" GridPane.rowIndex="3" />
+                            <Label text="Post Code" GridPane.rowIndex="4" />
+                            <Label text="Inner City Weighting" GridPane.rowIndex="6" />
+                            <Label text="Basic Salary" GridPane.rowIndex="7" />
+                            <Label text="Over Time" GridPane.rowIndex="8" />
+                            <Label text="Gross Pay" GridPane.rowIndex="10" />
+                            <Label text="Pensionable Pay" GridPane.rowIndex="11" />
+                            <Label text="Net Pay" GridPane.rowIndex="12" />
+                            <TextField fx:id="tfEmpRef" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <TextField fx:id="tfEmpName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <TextField fx:id="tfEmpAddress" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            <TextField fx:id="tfPostCode" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                            <TextField fx:id="tfICW" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                            <TextField fx:id="tfBasicSalary" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                            <TextField fx:id="tfOvertime" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                            <TextField fx:id="tfGrossPay" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                            <TextField fx:id="tfPensionablePay" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                            <TextField fx:id="tfNetPay" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                        </children>
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                    </GridPane>
+                    <GridPane hgap="10.0" vgap="8.0">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                        <children>
+                            <Label text="Pay Date :" />
+                            <TextField fx:id="tfPayDate" GridPane.columnIndex="1" />
+                            <Label text="Tax Period:" GridPane.rowIndex="1" />
+                            <Label text="Tax Code:" GridPane.rowIndex="2" />
+                            <Label text="NI Code:" GridPane.rowIndex="3" />
+                            <Label text="NI Number:" GridPane.rowIndex="4" />
+                            <ComboBox fx:id="cbTaxPeriod" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <ComboBox fx:id="cbTaxCode" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <ComboBox fx:id="cbNICode" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            <TextField fx:id="tfNINumber" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                            <Label text="Tax:" GridPane.rowIndex="5" />
+                            <Label text="Pension:" GridPane.rowIndex="6" />
+                            <Label text="Student Loan:" GridPane.rowIndex="7" />
+                            <Label text="NI Payment:" GridPane.rowIndex="8" />
+                            <Label text="Taxable Pay:" GridPane.rowIndex="9" />
+                            <Label text="Deductions:" GridPane.rowIndex="10" />
+                            <TextField fx:id="tfPension" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                            <TextField fx:id="tfTax" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                            <TextField fx:id="tfStudentLoan" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                            <TextField fx:id="tfNIPayment" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                            <TextField fx:id="tfTaxablePay" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                            <TextField fx:id="tfDeductions" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        </children>
+                    </GridPane>
+                    <VBox prefHeight="435.0" prefWidth="221.0" spacing="8.0">
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                        <children>
+                            <Label text=" Pay Slip" />
+                            <ScrollPane prefHeight="264.0" prefWidth="209.0">
+                                <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="300.0">
+                                        <children>
+                                            <TextArea fx:id="taPayslip" layoutX="-6.0" layoutY="-23.0" prefHeight="291.0" prefWidth="250.0" />
+                                        </children>
+                                    </AnchorPane>
+                                </content>
+                            </ScrollPane>
+                            <GridPane alignment="CENTER" hgap="10.0" prefHeight="136.0" prefWidth="209.0" vgap="10.0">
+                                <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <Button fx:id="btnNetWages" mnemonicParsing="false" onAction="#handleNetWages" text="Net Wages" />
+                                    <Button fx:id="btnPaySlip" mnemonicParsing="false" text="Pay Slip" GridPane.columnIndex="1" />
+                                    <Button fx:id="btnReset" mnemonicParsing="false" text="Reset" GridPane.rowIndex="1" />
+                                    <Button fx:id="btnExit" mnemonicParsing="false" text="Exit" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                </children>
+                                <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                </padding>
+                            </GridPane>
+                        </children>
+                    </VBox>
+                </children>
+            </HBox>
+        </center>
+    </BorderPane>
+</VBox>
