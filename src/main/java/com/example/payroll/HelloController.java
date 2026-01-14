@@ -54,7 +54,7 @@ public class HelloController {
         );
         cbNICode.setPromptText("Select NI Code");
 
-        // Make Calculation Fields Read-Only ---
+        // Make Calculation Fields Read-Only
         tfGrossPay.setEditable(false);
         tfNetPay.setEditable(false);
         tfDeductions.setEditable(false);
